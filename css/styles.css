@@ -4,9 +4,12 @@
   --secondary-font: 'raleway', sans-serif;
 
   /* text colors  */
-  --main-txt-col: #212121;
-  --secondary-txt-col: #757575;
+  --main-txt-col: #757575;
+  --secondary-txt-col: #212121;
   --accent-txt-col: #2196f3;
+  --dark-txt-col: #000;
+  --light-txt-col: #fff;
+  --footer-txt-col: rgba(255, 255, 255, 0.6);
 
   /* background-colors  */
   --main-bgc: #2f303a;
@@ -16,14 +19,16 @@
 
 body {
   font-family: var(--main-font);
-  color: var(--main-txt-col);
   font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-txt-col);
 }
 
 /* reset styles  */
 
 .link {
-  color: inherit;
+  color: currentColor;
   text-decoration: none;
 }
 
@@ -38,7 +43,7 @@ body {
 }
 
 .filter-btn.current-btn {
-  color: #fff;
+  color: var(--light-txt-col);
   background-color: var(--accent-btn-bgc);
 }
 
@@ -57,18 +62,20 @@ body {
 
 /* header  */
 
-.logo,
-.footer-logo {
+.logo {
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: #000000;
+  color: var(--accent-txt-col);
 }
 
-.logo-decore {
-  color: var(--accent-txt-col);
+.header-logo {
+  color: var(--dark-txt-col);
+}
+
+.nav-list {
+  color: var(--secondary-txt-col);
 }
 
 .header-link {
@@ -77,16 +84,14 @@ body {
   letter-spacing: 0.02em;
 }
 
-.header-contacts {
-  color: var(--secondary-txt-col);
-}
-
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-txt-col);
 }
 
-.hero-section {
+/* hero  */
+
+.hero {
   background-color: var(--main-bgc);
 }
 
@@ -97,7 +102,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--light-txt-col);
 }
 
 .hero-btn {
@@ -109,7 +114,7 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--light-txt-col);
   background-color: var(--accent-btn-bgc);
   cursor: pointer;
 }
@@ -121,53 +126,39 @@ body {
 /* our advantages */
 .advantages-subtitle {
   font-weight: 700;
-  font-size: 14px;
+  font-size: inherit;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.advantages-text {
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--secondary-txt-col);
 }
 
 /* our work  */
 
-.work-title {
+/* .work-title */
+
+.title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.17px;
+  line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
+  color: var(--secondary-txt-col);
 }
 
 /* our team  */
-.our-team-section {
+.our-team {
   background-color: var(--secondary-bgc);
 }
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17px;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
+/* .team-title */
 
-.team-subtitle {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-}
-
+.team-subtitle,
 .team-text {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  letter-spacing: 0.03em;
+}
+
+.team-subtitle {
+  font-weight: 500;
   color: var(--secondary-txt-col);
 }
 
@@ -178,16 +169,15 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  text-align: center;
   letter-spacing: 0.03em;
-  color: var(--main-txt-col);
+  color: var(--secondary-txt-col);
   background-color: var(--secondary-bgc);
   cursor: pointer;
 }
 
 .filter-btn:hover,
 .filterp-btn:focus {
-  color: #fff;
+  color: var(--light-txt-col);
   background-color: var(--accent-btn-bgc);
 }
 
@@ -196,13 +186,12 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--secondary-txt-col);
 }
 
 .portfolio-text {
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
-  color: var(--secondary-txt-col);
 }
 
 /* footer */
@@ -211,30 +200,27 @@ body {
 }
 
 .footer-logo {
-  color: #fff;
+  color: var(--light-txt-col);
 }
 
 .address {
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-style: inherit;
 }
 
 .address-street {
-  color: #ffffff;
+  color: var(--light-txt-col);
 }
 
 .address-street:hover,
 .address-street:focus {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-txt-col);
 }
 
 .address-contacts {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-txt-col);
 }
 
 .address-contacts:hover,
 .address-contacts:focus {
-  color: #fff;
+  color: var(--light-txt-col);
 }
